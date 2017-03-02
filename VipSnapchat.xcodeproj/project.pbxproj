@@ -12,6 +12,8 @@
 		18081A871E686D4900F14AD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18081A851E686D4900F14AD2 /* Main.storyboard */; };
 		18081A891E686D4900F14AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18081A881E686D4900F14AD2 /* Assets.xcassets */; };
 		18081A8C1E686D4900F14AD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18081A8A1E686D4900F14AD2 /* LaunchScreen.storyboard */; };
+		18081A941E6876D700F14AD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18081A931E6876D700F14AD2 /* GoogleService-Info.plist */; };
+		B1081AD08D1E03CBC79E968D /* Pods_VipSnapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5398C1B8FFE67A6E5A55D688 /* Pods_VipSnapchat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		18081A881E686D4900F14AD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18081A8B1E686D4900F14AD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18081A8D1E686D4900F14AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18081A931E6876D700F14AD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5398C1B8FFE67A6E5A55D688 /* Pods_VipSnapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VipSnapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1755FD50D8CDFA453549B6 /* Pods-VipSnapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipSnapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat.debug.xcconfig"; sourceTree = "<group>"; };
+		D7F25BC02ECCCCD98C711587 /* Pods-VipSnapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipSnapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1081AD08D1E03CBC79E968D /* Pods_VipSnapchat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				18081A801E686D4900F14AD2 /* VipSnapchat */,
 				18081A7F1E686D4900F14AD2 /* Products */,
+				B7B7D183534F75F9A139CCA3 /* Pods */,
+				431E8E9D624682723C71C293 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,9 +68,27 @@
 				18081A851E686D4900F14AD2 /* Main.storyboard */,
 				18081A881E686D4900F14AD2 /* Assets.xcassets */,
 				18081A8A1E686D4900F14AD2 /* LaunchScreen.storyboard */,
+				18081A931E6876D700F14AD2 /* GoogleService-Info.plist */,
 				18081A8D1E686D4900F14AD2 /* Info.plist */,
 			);
 			path = VipSnapchat;
+			sourceTree = "<group>";
+		};
+		431E8E9D624682723C71C293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5398C1B8FFE67A6E5A55D688 /* Pods_VipSnapchat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7B7D183534F75F9A139CCA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD1755FD50D8CDFA453549B6 /* Pods-VipSnapchat.debug.xcconfig */,
+				D7F25BC02ECCCCD98C711587 /* Pods-VipSnapchat.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18081A901E686D4900F14AD2 /* Build configuration list for PBXNativeTarget "VipSnapchat" */;
 			buildPhases = (
+				D6002E858806FE022AD2C5D7 /* [CP] Check Pods Manifest.lock */,
 				18081A7A1E686D4900F14AD2 /* Sources */,
 				18081A7B1E686D4900F14AD2 /* Frameworks */,
 				18081A7C1E686D4900F14AD2 /* Resources */,
+				B28F38AA3402F2D8C13B6AD3 /* [CP] Embed Pods Frameworks */,
+				5DA47D9CFD09C70300B883AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				18081A8C1E686D4900F14AD2 /* LaunchScreen.storyboard in Resources */,
+				18081A941E6876D700F14AD2 /* GoogleService-Info.plist in Resources */,
 				18081A891E686D4900F14AD2 /* Assets.xcassets in Resources */,
 				18081A871E686D4900F14AD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DA47D9CFD09C70300B883AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B28F38AA3402F2D8C13B6AD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6002E858806FE022AD2C5D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18081A7A1E686D4900F14AD2 /* Sources */ = {
@@ -260,6 +339,7 @@
 		};
 		18081A911E686D4900F14AD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD1755FD50D8CDFA453549B6 /* Pods-VipSnapchat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VipSnapchat/Info.plist;
@@ -272,6 +352,7 @@
 		};
 		18081A921E686D4900F14AD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7F25BC02ECCCCD98C711587 /* Pods-VipSnapchat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VipSnapchat/Info.plist;
