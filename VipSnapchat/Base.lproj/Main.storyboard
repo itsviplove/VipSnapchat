@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7ik-h7-tn7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VipSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,189 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snapchatlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qs0-E1-g1B">
+                                <rect key="frame" x="147.5" y="170" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="WH9-aM-Xcq"/>
+                                    <constraint firstAttribute="height" constant="80" id="x4t-D0-nBX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gtu-io-53F">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.29823580311051512" green="0.74731812635535444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="940-T1-seH"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SIGN UP">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="25" name="Skia-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChM-4Y-mGS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5E-ku-lIc">
+                                <rect key="frame" x="0.0" y="527" width="375" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.27008465079590394" blue="0.30931124679801769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="W0f-zW-7o5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Skia-Regular" family="Skia" pointSize="25"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOT-Ph-2Qi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qs0-E1-g1B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="9Q5-it-XpY"/>
+                            <constraint firstItem="qs0-E1-g1B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MIM-Dc-3MR"/>
+                            <constraint firstItem="g5E-ku-lIc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MVg-lG-80P"/>
+                            <constraint firstItem="Gtu-io-53F" firstAttribute="top" secondItem="g5E-ku-lIc" secondAttribute="bottom" id="SvB-ZY-4RT"/>
+                            <constraint firstItem="Gtu-io-53F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tu9-Pw-oBu"/>
+                            <constraint firstItem="Gtu-io-53F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cGe-er-TaZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Gtu-io-53F" secondAttribute="trailing" id="fef-Tb-WaW"/>
+                            <constraint firstAttribute="trailing" secondItem="g5E-ku-lIc" secondAttribute="trailing" id="h7S-3G-Nr5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gtu-io-53F" secondAttribute="bottom" id="pQv-qF-slI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LogInButton" destination="8bC-Xf-vdC" id="c6R-id-rkk"/>
+                        <outlet property="SignUpButton" destination="Gtu-io-53F" id="OME-5a-Cix"/>
+                        <segue destination="7ik-h7-tn7" kind="show" identifier="signupSegue" id="ZMd-6I-4Bt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="f2B-Hx-g8t">
+            <objects>
+                <viewController id="7ik-h7-tn7" customClass="SignUpViewController" customModule="VipSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uSC-bZ-s5Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZUa-61-VII"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IEG-Mp-S2c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5e-C0-0wQ">
+                                <rect key="frame" x="159.5" y="60" width="57.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6YY-aa-Zfw">
+                                <rect key="frame" x="77.5" y="140" width="220" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="bZN-1g-bpN"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="itsviplove@gmail.com">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqp-9N-OIm">
+                                <rect key="frame" x="78" y="204" width="220" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="eRf-QR-mHE"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="loveyouuu">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw8-HZ-fv0">
+                                <rect key="frame" x="124.5" y="268" width="125" height="36.5"/>
+                                <color key="backgroundColor" white="0.69019634042467393" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="iAj-MB-eiQ"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Log In">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" metaFont="system" size="21"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <color key="backgroundColor" white="0.69019634042467393" alpha="1" colorSpace="calibratedWhite"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signInTapped:" destination="7ik-h7-tn7" eventType="touchUpInside" id="dui-Ep-cke"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vw8-HZ-fv0" firstAttribute="top" secondItem="aqp-9N-OIm" secondAttribute="bottom" constant="50" id="Dhx-eY-Uja"/>
+                            <constraint firstItem="6YY-aa-Zfw" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="EbN-fm-xy8"/>
+                            <constraint firstItem="6YY-aa-Zfw" firstAttribute="top" secondItem="u5e-C0-0wQ" secondAttribute="bottom" constant="54.5" id="IQx-HV-T6g"/>
+                            <constraint firstItem="aqp-9N-OIm" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="OJd-0v-TqW"/>
+                            <constraint firstItem="u5e-C0-0wQ" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="Rq0-mt-BFW"/>
+                            <constraint firstItem="aqp-9N-OIm" firstAttribute="top" secondItem="6YY-aa-Zfw" secondAttribute="bottom" constant="50" id="dap-aQ-NaP"/>
+                            <constraint firstItem="u5e-C0-0wQ" firstAttribute="top" secondItem="uSC-bZ-s5Y" secondAttribute="bottom" constant="40" id="hAa-rf-g2E"/>
+                            <constraint firstItem="Vw8-HZ-fv0" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="hhs-2v-cTb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LoginLabel" destination="u5e-C0-0wQ" id="cuW-DR-Yna"/>
+                        <outlet property="emailTextField" destination="6YY-aa-Zfw" id="Y2R-8j-6xw"/>
+                        <outlet property="logInButton" destination="Vw8-HZ-fv0" id="YfO-dz-gG6"/>
+                        <outlet property="passwordTextField" destination="aqp-9N-OIm" id="dTM-DT-VNe"/>
+                        <segue destination="qUy-eu-aQd" kind="presentation" identifier="signedInSegue" id="19f-0U-yn8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVL-Of-qKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="37.331334332833585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NXB-E8-0Or">
+            <objects>
+                <viewController id="qUy-eu-aQd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="09N-Uv-muu"/>
+                        <viewControllerLayoutGuide type="bottom" id="p1H-YE-35q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x7g-wd-ARi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocm-Gp-tSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2526" y="38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Snapchatlogo.png" width="764" height="719"/>
+    </resources>
 </document>

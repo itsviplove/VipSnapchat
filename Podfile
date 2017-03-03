@@ -6,7 +6,10 @@ target 'VipSnapchat' do
   use_frameworks!
 
   # Pods for VipSnapchat
-
+pod 'Firebase'
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
 end
