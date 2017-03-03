@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7ik-h7-tn7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eDT-AI-i4z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -77,6 +77,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gtu-io-53F" secondAttribute="bottom" id="pQv-qF-slI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zzd-fT-BNs"/>
                     <connections>
                         <outlet property="LogInButton" destination="8bC-Xf-vdC" id="c6R-id-rkk"/>
                         <outlet property="SignUpButton" destination="Gtu-io-53F" id="OME-5a-Cix"/>
@@ -85,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1911.2" y="38.23088455772114"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="f2B-Hx-g8t">
@@ -158,15 +159,28 @@
                                     <action selector="signInTapped:" destination="7ik-h7-tn7" eventType="touchUpInside" id="dui-Ep-cke"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNU-nd-Mit">
+                                <rect key="frame" x="25" y="35" width="12" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="Qdu-Cj-W5A"/>
+                                    <constraint firstAttribute="height" constant="20" id="cZI-QG-ygH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BackButton.png"/>
+                                <connections>
+                                    <action selector="backButton:" destination="7ik-h7-tn7" eventType="touchUpInside" id="o51-D5-EDu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vw8-HZ-fv0" firstAttribute="top" secondItem="aqp-9N-OIm" secondAttribute="bottom" constant="50" id="Dhx-eY-Uja"/>
                             <constraint firstItem="6YY-aa-Zfw" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="EbN-fm-xy8"/>
                             <constraint firstItem="6YY-aa-Zfw" firstAttribute="top" secondItem="u5e-C0-0wQ" secondAttribute="bottom" constant="54.5" id="IQx-HV-T6g"/>
+                            <constraint firstItem="KNU-nd-Mit" firstAttribute="leading" secondItem="IEG-Mp-S2c" secondAttribute="leading" constant="25" id="NWI-jw-2I7"/>
                             <constraint firstItem="aqp-9N-OIm" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="OJd-0v-TqW"/>
                             <constraint firstItem="u5e-C0-0wQ" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="Rq0-mt-BFW"/>
                             <constraint firstItem="aqp-9N-OIm" firstAttribute="top" secondItem="6YY-aa-Zfw" secondAttribute="bottom" constant="50" id="dap-aQ-NaP"/>
+                            <constraint firstItem="KNU-nd-Mit" firstAttribute="top" secondItem="IEG-Mp-S2c" secondAttribute="top" constant="35" id="f0p-c7-IUK"/>
                             <constraint firstItem="u5e-C0-0wQ" firstAttribute="top" secondItem="uSC-bZ-s5Y" secondAttribute="bottom" constant="40" id="hAa-rf-g2E"/>
                             <constraint firstItem="Vw8-HZ-fv0" firstAttribute="centerX" secondItem="IEG-Mp-S2c" secondAttribute="centerX" id="hhs-2v-cTb"/>
                         </constraints>
@@ -176,17 +190,17 @@
                         <outlet property="emailTextField" destination="6YY-aa-Zfw" id="Y2R-8j-6xw"/>
                         <outlet property="logInButton" destination="Vw8-HZ-fv0" id="YfO-dz-gG6"/>
                         <outlet property="passwordTextField" destination="aqp-9N-OIm" id="dTM-DT-VNe"/>
-                        <segue destination="qUy-eu-aQd" kind="presentation" identifier="signedInSegue" id="19f-0U-yn8"/>
+                        <segue destination="wSi-ii-dNS" kind="presentation" identifier="signedInSegue" id="ab7-UW-Ws5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVL-Of-qKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="37.331334332833585"/>
+            <point key="canvasLocation" x="2694" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--Signed In View Controller-->
         <scene sceneID="NXB-E8-0Or">
             <objects>
-                <viewController id="qUy-eu-aQd" sceneMemberID="viewController">
+                <viewController id="qUy-eu-aQd" customClass="SignedInViewController" customModule="VipSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="09N-Uv-muu"/>
                         <viewControllerLayoutGuide type="bottom" id="p1H-YE-35q"/>
@@ -199,10 +213,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocm-Gp-tSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2526" y="38"/>
+            <point key="canvasLocation" x="4260" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PRY-ng-cRs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="eDT-AI-i4z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VeS-nU-w1D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SaD-Th-4VH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5u-he-6fP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="HB2-a6-8jg">
+            <objects>
+                <viewController id="wSi-ii-dNS" customClass="CameraViewController" customModule="VipSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4z6-1M-ieW"/>
+                        <viewControllerLayoutGuide type="bottom" id="ibr-NQ-xJz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aq4-zT-LAL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8T-DA-IrA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOk-3r-hip">
+                                        <rect key="frame" x="157.5" y="562" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="nZN-Ti-pje"/>
+                                            <constraint firstAttribute="height" constant="60" id="w7z-iT-5Fv"/>
+                                        </constraints>
+                                        <state key="normal" image="cameralogo.png"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="wSi-ii-dNS" eventType="touchUpInside" id="zu1-ye-kXw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eOk-3r-hip" secondAttribute="bottom" constant="45" id="8ha-9Y-Uab"/>
+                                    <constraint firstItem="eOk-3r-hip" firstAttribute="centerX" secondItem="o8T-DA-IrA" secondAttribute="centerX" id="FGx-l7-mI7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="o8T-DA-IrA" secondAttribute="trailing" id="2PH-vR-zlF"/>
+                            <constraint firstItem="o8T-DA-IrA" firstAttribute="leading" secondItem="Aq4-zT-LAL" secondAttribute="leading" id="3rN-km-9Oj"/>
+                            <constraint firstItem="o8T-DA-IrA" firstAttribute="top" secondItem="Aq4-zT-LAL" secondAttribute="top" id="el4-zg-qUH"/>
+                            <constraint firstItem="ibr-NQ-xJz" firstAttribute="top" secondItem="o8T-DA-IrA" secondAttribute="bottom" id="vBv-Te-kLW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="eOk-3r-hip" id="c49-xa-AmT"/>
+                        <outlet property="cameraView" destination="o8T-DA-IrA" id="Iri-Oy-woF"/>
+                        <segue destination="qUy-eu-aQd" kind="show" identifier="loggedInSegue" id="hkl-d5-6cZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5w-ca-mj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3508" y="38"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BackButton.png" width="180" height="330"/>
         <image name="Snapchatlogo.png" width="764" height="719"/>
+        <image name="cameralogo.png" width="111" height="111"/>
     </resources>
 </document>

@@ -15,6 +15,11 @@
 		18081A941E6876D700F14AD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18081A931E6876D700F14AD2 /* GoogleService-Info.plist */; };
 		18081A961E689A0100F14AD2 /* Snapchatlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18081A951E689A0100F14AD2 /* Snapchatlogo.png */; };
 		18081A981E68B08700F14AD2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18081A971E68B08700F14AD2 /* SignUpViewController.swift */; };
+		187B99021E6984B000D64580 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B99011E6984B000D64580 /* Classes.swift */; };
+		187B99041E698B9E00D64580 /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187B99031E698B9E00D64580 /* BackButton.png */; };
+		189B91221E69B90000F9A9BD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B91211E69B90000F9A9BD /* CameraViewController.swift */; };
+		189B91241E69BB7900F9A9BD /* cameralogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 189B91231E69BB7900F9A9BD /* cameralogo.png */; };
+		18EC61011E697799009A9FC7 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC61001E697799009A9FC7 /* SignedInViewController.swift */; };
 		B1081AD08D1E03CBC79E968D /* Pods_VipSnapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5398C1B8FFE67A6E5A55D688 /* Pods_VipSnapchat.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,11 @@
 		18081A931E6876D700F14AD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18081A951E689A0100F14AD2 /* Snapchatlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snapchatlogo.png; sourceTree = "<group>"; };
 		18081A971E68B08700F14AD2 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		187B99011E6984B000D64580 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		187B99031E698B9E00D64580 /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
+		189B91211E69B90000F9A9BD /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		189B91231E69BB7900F9A9BD /* cameralogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameralogo.png; sourceTree = "<group>"; };
+		18EC61001E697799009A9FC7 /* SignedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
 		5398C1B8FFE67A6E5A55D688 /* Pods_VipSnapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VipSnapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1755FD50D8CDFA453549B6 /* Pods-VipSnapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipSnapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat.debug.xcconfig"; sourceTree = "<group>"; };
 		D7F25BC02ECCCCD98C711587 /* Pods-VipSnapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipSnapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,12 +79,17 @@
 			children = (
 				18081A811E686D4900F14AD2 /* AppDelegate.swift */,
 				18081A831E686D4900F14AD2 /* ViewController.swift */,
+				187B99011E6984B000D64580 /* Classes.swift */,
 				18081A971E68B08700F14AD2 /* SignUpViewController.swift */,
+				18EC61001E697799009A9FC7 /* SignedInViewController.swift */,
 				18081A851E686D4900F14AD2 /* Main.storyboard */,
+				189B91211E69B90000F9A9BD /* CameraViewController.swift */,
 				18081A881E686D4900F14AD2 /* Assets.xcassets */,
 				18081A8A1E686D4900F14AD2 /* LaunchScreen.storyboard */,
 				18081A931E6876D700F14AD2 /* GoogleService-Info.plist */,
 				18081A8D1E686D4900F14AD2 /* Info.plist */,
+				187B99031E698B9E00D64580 /* BackButton.png */,
+				189B91231E69BB7900F9A9BD /* cameralogo.png */,
 				18081A951E689A0100F14AD2 /* Snapchatlogo.png */,
 			);
 			path = VipSnapchat;
@@ -132,6 +147,7 @@
 				TargetAttributes = {
 					18081A7D1E686D4900F14AD2 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = W6693C4W9R;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -160,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18081A8C1E686D4900F14AD2 /* LaunchScreen.storyboard in Resources */,
+				189B91241E69BB7900F9A9BD /* cameralogo.png in Resources */,
+				187B99041E698B9E00D64580 /* BackButton.png in Resources */,
 				18081A961E689A0100F14AD2 /* Snapchatlogo.png in Resources */,
 				18081A941E6876D700F14AD2 /* GoogleService-Info.plist in Resources */,
 				18081A891E686D4900F14AD2 /* Assets.xcassets in Resources */,
@@ -225,6 +243,9 @@
 				18081A981E68B08700F14AD2 /* SignUpViewController.swift in Sources */,
 				18081A841E686D4900F14AD2 /* ViewController.swift in Sources */,
 				18081A821E686D4900F14AD2 /* AppDelegate.swift in Sources */,
+				187B99021E6984B000D64580 /* Classes.swift in Sources */,
+				18EC61011E697799009A9FC7 /* SignedInViewController.swift in Sources */,
+				189B91221E69B90000F9A9BD /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +371,7 @@
 			baseConfigurationReference = BD1755FD50D8CDFA453549B6 /* Pods-VipSnapchat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W6693C4W9R;
 				INFOPLIST_FILE = VipSnapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsviplove.VipSnapchat;
@@ -363,6 +385,7 @@
 			baseConfigurationReference = D7F25BC02ECCCCD98C711587 /* Pods-VipSnapchat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W6693C4W9R;
 				INFOPLIST_FILE = VipSnapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.itsviplove.VipSnapchat;
