@@ -74,7 +74,13 @@ class CameraViewController: UIViewController {
     }
         @IBAction func takePhoto(_ sender: Any) {
         
-        
+            let settings = AVCapturePhotoSettings()
+            let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+            let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType, kCVPixelBufferWidthKey as String : 160, kCVPixelBufferHeightKey as String : 160]
+            
+            settings.previewPhotoFormat = previewFormat
+            sessionOutput.capturePhoto(with: settings, delegate: self as! AVCapturePhotoCaptureDelegate)
+            
     }
     
 }

@@ -11,7 +11,8 @@ import Firebase
 
 class SignUpViewController: UIViewController {
     
-    var text : String?
+    
+    
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,10 +21,11 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var logInButton: UIButton!
     
-  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("hey yu there")
         
         
     }
@@ -40,13 +42,15 @@ class SignUpViewController: UIViewController {
                         print("we have an error while creating")
                     } else {
                         print("created user sucessfully ")
-                        self.performSegue(withIdentifier: "signedInSegue", sender: nil)
+                        FIRDatabase.database().reference().child("users").child((user?.uid)!).child("email").setValue(user!.email)
+                        self.performSegue(withIdentifier: "loggedInSegue", sender: nil)
                         
                     }
                 })
             } else {
-                print("Signed In sucessfully")
-                self.performSegue(withIdentifier: "signedInSegue", sender: nil)
+                
+                print("Signed In sucessfully ")
+                self.performSegue(withIdentifier: "loggedInSegue", sender: nil)
             }
         })
         
@@ -56,12 +60,8 @@ class SignUpViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    func labelChange() {
-        _ = "Sign up"
-        
-        
-        
-        
-    }
+    
+    
     
 }
+

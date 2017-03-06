@@ -8,6 +8,9 @@
 
 import Foundation
 
-class Labels {
-    var labeltext : String = ""
+class User {
+    var email : String = ""
+    var uid : String = ""
 }
+
+

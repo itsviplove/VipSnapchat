@@ -6,6 +6,8 @@
 	<string>en</string>
 	<key>NSCameraUsageDescription</key>
 	<string>we want to use camera for take Awesome pics </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>we want your photos </string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

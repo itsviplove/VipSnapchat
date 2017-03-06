@@ -12,28 +12,38 @@ import Firebase
 class ViewController: UIViewController {
     
     
+    
+    
     @IBOutlet weak var SignUpButton: UIButton!
     @IBOutlet var LogInButton: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.yellow
-                
-    }
-
-    @IBAction func logInTapped(_ sender: Any) {
-        performSegue(withIdentifier: "signupSegue", sender: nil)
-
+        
+        
         
         
     }
+
     
-    @IBAction func signUpTapped(_ sender: Any) {
+    
+    @IBAction func logInTapped(_ sender: UIButton) {
+        
+        
+        print("login tapped ")
+        
+        performSegue(withIdentifier: "signupSegue", sender: sender)
+
+        
+        
+    }
+        @IBAction func signUpTapped(_ sender: Any) {
+        
+        
+        print("login tapped2 )")
         
         performSegue(withIdentifier: "signupSegue", sender: nil)
-        let labelChange = SignUpViewController()
-        labelChange.labelChange()
-        
         
     }
     
