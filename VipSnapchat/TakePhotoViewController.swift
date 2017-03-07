@@ -21,7 +21,7 @@ class TakePhotoViewController: UIViewController , UIImagePickerControllerDelegat
     @IBOutlet weak var descriptionTextField: UITextField!
     
     @IBOutlet weak var imageView: UIImageView!
-    var imageUIUD = NSUUID()
+    var imageUIUD = NSUUID().uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +97,7 @@ class TakePhotoViewController: UIViewController , UIImagePickerControllerDelegat
         let nextVC = segue.destination as! PhotoToSendViewController
         nextVC.descrip = descriptionTextField.text!
         nextVC.imageURl = imageURL2
-      
+        nextVC.imageUiud = imageUIUD
     }
     
 }

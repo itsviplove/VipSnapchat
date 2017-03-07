@@ -16,7 +16,7 @@ class PhotoToSendViewController: UIViewController , UITableViewDelegate , UITabl
     var users : [User] = []
     var imageURl = ""
     var descrip = ""
-    var currentUserEmail = ""
+    var imageUiud = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,12 @@ class PhotoToSendViewController: UIViewController , UITableViewDelegate , UITabl
             user.email = ((snapshot.value as AnyObject)["email"] as? String)!
             user.uid = snapshot.key
             
+            
             self.users.append(user)
             self.tableview.reloadData()
         })
+        
+    
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,15 +51,15 @@ class PhotoToSendViewController: UIViewController , UITableViewDelegate , UITabl
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user2 = users[indexPath.row]
-        currentUserEmail = (FIRAuth.auth()?.currentUser?.email)!
         
-        let snap = ["from" : currentUserEmail,"description" : descrip,"imageURL" : imageURl]
+        
+        let snap = ["from" : FIRAuth.auth()?.currentUser!.email!,"description" : descrip,"imageURL" : imageURl , "uiud" : imageUiud]
             FIRDatabase.database().reference().child("users").child(user2.uid).child("snaps").childByAutoId().setValue(snap)
         performSegue(withIdentifier: "sendingPicSegue", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextVC = segue.destination as! SignedInViewController
-            nextVC.user3 = users
+       // let nextVC = segue.destination as! SignedInViewController
+        
         
     }
 }

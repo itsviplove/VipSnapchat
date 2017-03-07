@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eDT-AI-i4z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eDT-AI-i4z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -237,6 +238,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dYF-1E-vKH" id="Yja-zV-PTs"/>
+                        <segue destination="aTs-MG-jQh" kind="show" identifier="photoViewSegue" id="Rj8-lz-a7S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocm-Gp-tSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +258,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h7W-FM-Lvn">
-                                <rect key="frame" x="47" y="114" width="280" height="250"/>
+                                <rect key="frame" x="47" y="70" width="280" height="250"/>
                                 <color key="backgroundColor" red="0.46099320781213715" green="0.49071464414083182" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="9D5-Kw-Yuw"/>
@@ -264,13 +266,13 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJU-gM-ZcA">
-                                <rect key="frame" x="47.5" y="384" width="280" height="17"/>
+                                <rect key="frame" x="47.5" y="340" width="280" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-zg-9oF">
-                                <rect key="frame" x="171" y="426" width="32" height="30"/>
+                                <rect key="frame" x="171" y="382" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="TcZ-Bt-0Pe" eventType="touchUpInside" id="oo1-px-lWE"/>
@@ -360,6 +362,48 @@
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
+        <!--Photo View View Controller-->
+        <scene sceneID="e0N-az-Bwp">
+            <objects>
+                <viewController id="aTs-MG-jQh" customClass="PhotoViewViewController" customModule="VipSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ans-Kp-Tis"/>
+                        <viewControllerLayoutGuide type="bottom" id="pf8-GR-Olr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bIm-wp-MJm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8vZ-sP-mxY">
+                                <rect key="frame" x="26" y="30" width="323" height="537"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suW-GH-319">
+                                <rect key="frame" x="144" y="605" width="87" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="suW-GH-319" firstAttribute="centerX" secondItem="bIm-wp-MJm" secondAttribute="centerX" id="6le-7u-iBQ"/>
+                            <constraint firstItem="pf8-GR-Olr" firstAttribute="top" secondItem="8vZ-sP-mxY" secondAttribute="bottom" constant="100" id="Fwy-My-mVL"/>
+                            <constraint firstItem="8vZ-sP-mxY" firstAttribute="centerX" secondItem="bIm-wp-MJm" secondAttribute="centerX" id="NoZ-h8-yud"/>
+                            <constraint firstItem="8vZ-sP-mxY" firstAttribute="leading" secondItem="bIm-wp-MJm" secondAttribute="leadingMargin" constant="10" id="OnH-S3-WK0"/>
+                            <constraint firstItem="8vZ-sP-mxY" firstAttribute="top" secondItem="ans-Kp-Tis" secondAttribute="bottom" constant="10" id="PM2-AZ-LDw"/>
+                            <constraint firstItem="suW-GH-319" firstAttribute="top" secondItem="8vZ-sP-mxY" secondAttribute="bottom" constant="38" id="h1R-LN-DiH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8vZ-sP-mxY" secondAttribute="trailing" constant="10" id="v0R-st-jso"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="suW-GH-319" id="5eO-F8-4rN"/>
+                        <outlet property="photoView" destination="8vZ-sP-mxY" id="IO9-Kf-8vy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGa-FF-6mA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4457" y="828"/>
+        </scene>
         <!--Camera View Controller-->
         <scene sceneID="HB2-a6-8jg">
             <objects>
@@ -437,6 +481,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="am5-sS-qjF"/>
-        <segue reference="SaD-Th-4VH"/>
+        <segue reference="C7B-7y-iFB"/>
     </inferredMetricsTieBreakers>
 </document>

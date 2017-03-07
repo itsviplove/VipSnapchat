@@ -22,6 +22,8 @@
 		189D75CC1E6C0ACD00F22E59 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D75CB1E6C0ACD00F22E59 /* TakePhotoViewController.swift */; };
 		189D75CE1E6C0B0C00F22E59 /* PhotoToSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D75CD1E6C0B0C00F22E59 /* PhotoToSendViewController.swift */; };
 		18EC61011E697799009A9FC7 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC61001E697799009A9FC7 /* SignedInViewController.swift */; };
+		779663B31E6EB0D000330D61 /* Snaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779663B21E6EB0D000330D61 /* Snaps.swift */; };
+		779663B51E6EBAE100330D61 /* PhotoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779663B41E6EBAE100330D61 /* PhotoViewViewController.swift */; };
 		B1081AD08D1E03CBC79E968D /* Pods_VipSnapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5398C1B8FFE67A6E5A55D688 /* Pods_VipSnapchat.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		189D75CD1E6C0B0C00F22E59 /* PhotoToSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoToSendViewController.swift; sourceTree = "<group>"; };
 		18EC61001E697799009A9FC7 /* SignedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
 		5398C1B8FFE67A6E5A55D688 /* Pods_VipSnapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VipSnapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		779663B21E6EB0D000330D61 /* Snaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snaps.swift; sourceTree = "<group>"; };
+		779663B41E6EBAE100330D61 /* PhotoViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewViewController.swift; sourceTree = "<group>"; };
 		BD1755FD50D8CDFA453549B6 /* Pods-VipSnapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipSnapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat.debug.xcconfig"; sourceTree = "<group>"; };
 		D7F25BC02ECCCCD98C711587 /* Pods-VipSnapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipSnapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipSnapchat/Pods-VipSnapchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +107,7 @@
 				18EC61001E697799009A9FC7 /* SignedInViewController.swift */,
 				189D75CB1E6C0ACD00F22E59 /* TakePhotoViewController.swift */,
 				189D75CD1E6C0B0C00F22E59 /* PhotoToSendViewController.swift */,
+				779663B41E6EBAE100330D61 /* PhotoViewViewController.swift */,
 				189B91211E69B90000F9A9BD /* CameraViewController.swift */,
 				189D75CA1E6C044A00F22E59 /* Models */,
 			);
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				187B99011E6984B000D64580 /* Classes.swift */,
+				779663B21E6EB0D000330D61 /* Snaps.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 				18081A981E68B08700F14AD2 /* SignUpViewController.swift in Sources */,
 				18081A841E686D4900F14AD2 /* ViewController.swift in Sources */,
 				18081A821E686D4900F14AD2 /* AppDelegate.swift in Sources */,
+				779663B31E6EB0D000330D61 /* Snaps.swift in Sources */,
 				187B99021E6984B000D64580 /* Classes.swift in Sources */,
+				779663B51E6EBAE100330D61 /* PhotoViewViewController.swift in Sources */,
 				18EC61011E697799009A9FC7 /* SignedInViewController.swift in Sources */,
 				189D75CC1E6C0ACD00F22E59 /* TakePhotoViewController.swift in Sources */,
 				189B91221E69B90000F9A9BD /* CameraViewController.swift in Sources */,
